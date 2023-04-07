@@ -4,28 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Classroom Manager</title>
 </head>
 <body>
-    <h1>Classroom Manager</h1>
-    <ul id="student-list">
-
-    </ul>
-    <button onclick="shuffleTheClassroom()">Rimescola la classe</button>
     <div>
-        <h3>Inserimento Studente</h3>
-        <div>
-            <span>Nome:</span>
-            <input type="text">
-        </div>
+        <h1>Classroom Manager</h1>
     </div>
     <div>
+        <ul id="student-list">
+
+        </ul>
+        <button onclick="shuffleTheClassroom()">Rimescola la classe</button>
+    </div>
+    <div>
+        <div>
+            <h3>Inserimento Studente</h3>
+            <span>Nome:</span>
+            <input id="name" type="text" placeholder="Inserisci Nome">
+        </div>
         <div>
             <span>Cognome:</span>
-            <input type="text">
+            <input id="surname" type="text" placeholder="Inserisci Cognome">
         </div>
+        <div>
+            <span>Anno di nascita:</span>
+            <input id="birth" type="text" placeholder="dd/mm/yyyy">
+        </div>
+        <button onclick="addStudentToClassroom()">Inserisci Studente</button>
     </div>
-    <button onclick="addStudentToClassroom()">Inserisci Studente</button>
 </body>
 <script src="./student.js"></script>
 <script src="./classroom.js"></script>

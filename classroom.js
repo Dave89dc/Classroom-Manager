@@ -1,3 +1,5 @@
+"use strict"
+
 class Classroom {
 
     constructor(students = []) {
@@ -16,8 +18,17 @@ class Classroom {
         };
     };
 
-    shuffleStudent() {
-        
+    shuffleStudents() {
+        let students = this.students;
+        let j;
+        let temp;
+        for (let i = students.length-1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            temp = students[i];
+            students[i] = students[j];
+            students[j] = temp;
+        };
+        this.students = students;
     };
 
 };
