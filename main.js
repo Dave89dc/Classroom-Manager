@@ -13,8 +13,8 @@ const student4 = new Student('Francesco', 'Badile');
 const student5 = new Student('Pietro', 'Viglino');
 const student6 = new Student('Valentina', 'Cherubini');
 const student7 = new Student('Vlad', "P'yatnytskyy");
-const student8 = new Student('Daniele', 'Puggi');
-const student9 = new Student('Jing', 'Wong');
+const student8 = new Student('Daniele', 'Puggioni');
+const student9 = new Student('Jing', 'Wang');
 
 const classroom1 = new Classroom([student1, student2, student3, student4]);
 
