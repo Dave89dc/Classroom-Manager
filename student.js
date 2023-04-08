@@ -19,6 +19,27 @@ class Student {
         this.isBirthDay;
     };
 
+    nameOf() {
+        if (typeof this.dob === "string") {
+            let dob = this.dob.split("/");
+            let array = [];
+            for (let i = 0; i < dob.length; i++) {
+                array.unshift(dob[i]);
+            };
+            let newDate = array.join("-");
+            let date = new Date();
+            let birthDate = new Date(newDate);
+            let currentMonth = date.getMonth();
+            let currentDay = date.getDate();
+            let birthMonth = birthDate.getMonth();
+            let birthDay = birthDate.getDate();
+            if (currentMonth === birthMonth && currentDay === birthDay) {
+                return this.name.toUpperCase();
+            };
+        return this.name;
+        }
+    }
+
     get getAge() {
         if (typeof this._dob === "string") {
             let dob = this._dob.split("/");
