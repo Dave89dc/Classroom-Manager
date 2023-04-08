@@ -9,16 +9,17 @@
 
 
 const student1 = new Student('Simone', 'Maccarone', '20/05/2003');
-const student2 = new Student('Luis Alberto', 'Castro');
+const student2 = new Student('Luis Alberto', 'Castro', '28/07/1993');
 const student3 = new Student('Davide', 'Consigliere', '29/09/1989');
 const student4 = new Student('Francesco', 'Badile', '5/09/1993');
 const student5 = new Student('Pietro', 'Viglino', '29/12/1988');
 const student6 = new Student('Valentina', 'Cherubini', '1/06/2001');
-const student7 = new Student('Vlad', "P'yatnytskyy");
+const student7 = new Student('Vlad', "P'yatnytskyy", '2/10/1997');
 const student8 = new Student('Daniele', 'Puggioni', '17/08/1999');
 const student9 = new Student('Jing', 'Wang', '16/06/1993');
+const student10 = new Student('Davide', 'Cresta', '30/05/2002');
 
-const classroom1 = new Classroom([student1, student2, student3, student4, student5, student6, student7, student8, student9]);
+const classroom1 = new Classroom([student1, student2, student3, student4, student5, student6, student7, student8, student9, student10]);
 
 function displayClassroom(classroom) {
     document.getElementById('student-list').innerHTML = '';

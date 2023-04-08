@@ -8,31 +8,36 @@
     <title>Classroom Manager</title>
 </head>
 <body>
-    <div>
+    <header>
         <h1>Classroom Manager</h1>
-    </div>
-    <div>
-        <ul id="student-list">
+    </header>
+    <main>
+        <div id="class">
+            <ul id="student-list">
 
-        </ul>
-        <button onclick="shuffleTheClassroom()">Rimescola la classe</button>
-    </div>
-    <div>
-        <div>
-            <h3>Inserimento Studente</h3>
-            <span>Nome:</span>
-            <input id="name" type="text" placeholder="Inserisci Nome">
+            </ul>
+            <button onclick="shuffleTheClassroom()">Rimescola la classe</button>
         </div>
-        <div>
-            <span>Cognome:</span>
-            <input id="surname" type="text" placeholder="Inserisci Cognome">
+        <div id="aside">
+            <div>
+                <h3>Inserimento Studente</h3>
+                <span>Nome:</span>
+                <input id="name" type="text" placeholder="Inserisci Nome">
+            </div>
+            <div>
+                <span>Cognome:</span>
+                <input id="surname" type="text" placeholder="Inserisci Cognome">
+            </div>
+            <div>
+                <span>Anno di nascita:</span>
+                <input id="birth" type="text" placeholder="dd/mm/yyyy">
+            </div>
+            <button onclick="addStudentToClassroom()">Inserisci Studente</button>
         </div>
-        <div>
-            <span>Anno di nascita:</span>
-            <input id="birth" type="text" placeholder="dd/mm/yyyy">
-        </div>
-        <button onclick="addStudentToClassroom()">Inserisci Studente</button>
-    </div>
+    </main>
+    <footer>
+
+    </footer>
 </body>
 <script src="./student.js"></script>
 <script src="./classroom.js"></script>
