@@ -16,23 +16,29 @@
             <ul id="student-list">
 
             </ul>
-            <button onclick="shuffleTheClassroom()">Rimescola la classe</button>
+            <div id="bottom-section">
+                <button id="shuffle-button" onclick="shuffleTheClassroom()">Rimescola la classe</button><br>
+                <span>Press coin "<button>|</button> " to remove student.</span>
+            </div>
         </div>
         <div id="aside">
             <div>
-                <h3>Inserimento Studente</h3>
-                <span>Nome:</span>
+                <h3>Inserimento <br> Studente</h3>
+                <span>Nome:</span><br>
                 <input id="name" type="text" placeholder="Inserisci Nome">
             </div>
             <div>
-                <span>Cognome:</span>
+                <span>Cognome:</span><br>
                 <input id="surname" type="text" placeholder="Inserisci Cognome">
             </div>
             <div>
-                <span>Anno di nascita:</span>
+                <span>Anno di <br> nascita:</span><br>
                 <input id="birth" type="text" placeholder="dd/mm/yyyy">
             </div>
-            <button onclick="addStudentToClassroom()">Inserisci Studente</button>
+            <button id="add-button" onclick="addStudentToClassroom()">Inserisci Studente</button>
+            <div id="box-door">
+                <div id="door"></div>
+            </div>
         </div>
     </main>
     <footer>

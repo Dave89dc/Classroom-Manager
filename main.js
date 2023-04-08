@@ -10,7 +10,7 @@
 
 const student1 = new Student('Simone', 'Maccarone', '20/05/2003');
 const student2 = new Student('Luis Alberto', 'Castro', '28/07/1993');
-const student3 = new Student('Davide', 'Consigliere', '29/09/1989');
+const student3 = new Student('Dave', 'Consigliere', '29/09/1989');
 const student4 = new Student('Francesco', 'Badile', '5/09/1993');
 const student5 = new Student('Pietro', 'Viglino', '29/12/1988');
 const student6 = new Student('Valentina', 'Cherubini', '1/06/2001');
@@ -27,9 +27,9 @@ function displayClassroom(classroom) {
     for (let i = 0; i < students.length; i++) {
         const studentList = document.getElementById('student-list');
         const list = document.createElement('li');
-        const textList = document.createTextNode(students[i].name + " " + students[i].surname);
+        const textList = document.createTextNode(`${students[i].name}`);
         const removeButton = document.createElement('button');
-        const textButton = document.createTextNode('Remove Student');
+        const textButton = document.createTextNode('|');
         removeButton.appendChild(textButton);
         removeButton.addEventListener('click', (event) => removeStudentFromList(students[i]));
         list.appendChild(textList);
@@ -50,7 +50,7 @@ function addStudentToClassroom() {
     const inputName = document.getElementById('name');
     const inputSurname = document.getElementById('surname');
     const inputBirth = document.getElementById('birth');
-    if(inputName.value !== '' && inputSurname.value !== '') {
+    if((inputName.value !== '') && (inputSurname.value !== '') && (inputBirth !== '')) {
         const newName = inputName.value;
         const newSurname = inputSurname.value;
         const newDob = inputBirth.value;
