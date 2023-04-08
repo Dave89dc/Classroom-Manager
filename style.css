@@ -1,8 +1,24 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap');
+
+/* * {
     box-sizing: border-box;
+}; */
+
+/* html, body { 
+    margin: 0px;
+    padding: 0px;
+}; */
+
+header {
+    display: flex;
+    justify-content: center;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: x-large;
+    color: #FFCA3A;
+    background-color: #FF595E;
+    border-bottom: 4px solid #FFCA3A;
 };
 
-html, body {
-    margin: 0;
-    padding: 0;
-}
+main {
+    display: flex;
+};
