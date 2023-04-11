@@ -30,13 +30,31 @@ function displayClassroom(classroom) {
         const textList = document.createTextNode(`${(students[i]).nameOf()}`);
         const removeButton = document.createElement('button');
         const textButton = document.createTextNode('|');
+        const brick1 = document.createElement('div');
+        const brick2 = document.createElement('div');
+        const brick3 = document.createElement('div');
         removeButton.appendChild(textButton);
         removeButton.addEventListener('click', (event) => removeStudentFromList(students[i]));
         list.appendChild(textList);
         list.appendChild(removeButton);
+        list.appendChild(brick1);
+        list.appendChild(brick2);
+        list.appendChild(brick3);
         studentList.appendChild(list);
     };
 };
+
+
+// function displayClassroom(classroom) {
+//     const studentList = document.getElementById('student-list');
+//     studentList.innerHTML = '';
+//     const students = classroom.students;
+//     for (let i = 0; i < students.length; i++) {
+//         const element = students[i];
+//         studentList.innerHTML += `<li>${element.nameOf()} <button onclick='removeStudentFromList()'>|</button></li>`;
+//     };
+// };
+
 
 function removeStudentFromList(stud) {
     const studentsOfClassroom = classroom1.students;

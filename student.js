@@ -35,6 +35,7 @@ class Student {
             let birthDay = birthDate.getDate();
             if (currentMonth === birthMonth && currentDay === birthDay) {
                 return this.name.toUpperCase();
+                // return nameToBirthDay.style.color = '#FF595E';
             };
         return this.name;
         }

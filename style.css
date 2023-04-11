@@ -76,6 +76,13 @@ li {
     border-bottom: 42px dashed rgb(136, 68, 20);
 }
 
+.brick {
+    display: inline;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(136, 68, 20);
+}
+
 input {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -276,7 +283,7 @@ marquee {
     }
 
     li {
-        border-bottom: 36px dashed rgb(136, 68, 20);
+        border-bottom: 38px dashed rgb(136, 68, 20);
     }
 
 }
