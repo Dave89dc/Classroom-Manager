@@ -53,18 +53,16 @@ function addStudentToClassroom() {
     const newName = inputName.value;
     const newSurname = inputSurname.value;
     const newDob = inputBirth.value;
-    if(inputName.value !== '' && inputSurname.value !== '') {
-        if(newDob !== '') {
-            let newStudent = new Student(newName, newSurname, newDob);
-            for (let i = 0; i < studentsOfClassroom.length; i++) {
-                if(studentsOfClassroom[i].name === newStudent.name && studentsOfClassroom[i].surname === newStudent.surname) {
-                    newStudent = '';
-                };
+    if(newName !== '' && newSurname !== '' && newDob !== '') {
+        let newStudent = new Student(newName, newSurname, newDob);
+        for (let i = 0; i < studentsOfClassroom.length; i++) {
+            if(studentsOfClassroom[i].name === newStudent.name && studentsOfClassroom[i].surname === newStudent.surname) {
+                newStudent = '';
             };
-            if(newStudent !== '') {
-                studentsOfClassroom.push(newStudent);
-                displayClassroom(classroom1);
-            };
+        };
+        if(newStudent !== '') {
+            studentsOfClassroom.push(newStudent);
+            displayClassroom(classroom1);
         };
     };
     inputName.value = '';
