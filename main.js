@@ -102,3 +102,55 @@ function shuffleTheClassroom() {
 };
 
 displayClassroom(classroom1);
+
+
+
+
+// Esercizi Codwars
+
+// const number = 123456789;
+
+// function descendingOrder(n){
+//     let string = n.toString();
+//     let tempArray = string.split('');
+//     let decendingArray = tempArray.sort(function (number1, number2) {
+//         if(number1 > number2) {
+//             return -1;
+//         } else if(number1 < number2) {
+//             return 1;
+//         } else {
+//             return 0;
+//         }
+//     } );
+//     let newNumber = decendingArray.join('');
+//     let number2 = parseInt(newNumber);
+//     return number2
+// };
+
+// console.log(descendingOrder(number));
+
+
+// let arrayOfNumbers = [5, 3, 2, 1, 4];
+
+// function removeSmallest(numbers) {
+//     let array = [];
+//     let tempNum = -Infinity;
+//     if(numbers.length > 1) {
+//         for (let i = 0; i < numbers.length; i++) {
+//             if(tempNum > numbers[i]) {
+//                 if(!array.includes(tempNum)) {
+//                     array.push(tempNum);
+//                 }
+//             } else {
+//                 if(!array.includes(numbers[i])) {
+//                     array.push(numbers[i]);
+//                 }
+//             }
+//             tempNum = numbers[i];
+//         };
+//         return array;
+//     };
+//     return array;
+// }
+
+// console.log(removeSmallest(arrayOfNumbers))
