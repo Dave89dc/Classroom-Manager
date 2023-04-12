@@ -21,39 +21,37 @@ const student8 = new Student('Davide', 'Cresta', '30/05/2002');
 
 const classroom1 = new Classroom([student1, student2, student3, student4, student5, student6, student7, student8, student9, student10]);
 
-function displayClassroom(classroom) {
-    document.getElementById('student-list').innerHTML = '';
-    const students = classroom.students;
-    for (let i = 0; i < students.length; i++) {
-        const studentList = document.getElementById('student-list');
-        const list = document.createElement('li');
-        const textList = document.createTextNode(`${(students[i]).nameOf()}`);
-        const removeButton = document.createElement('button');
-        const textButton = document.createTextNode('|');
-        const brick1 = document.createElement('div');
-        const brick2 = document.createElement('div');
-        const brick3 = document.createElement('div');
-        removeButton.appendChild(textButton);
-        removeButton.addEventListener('click', (event) => removeStudentFromList(students[i]));
-        list.appendChild(textList);
-        list.appendChild(removeButton);
-        list.appendChild(brick1);
-        list.appendChild(brick2);
-        list.appendChild(brick3);
-        studentList.appendChild(list);
-    };
-};
-
-
 // function displayClassroom(classroom) {
-//     const studentList = document.getElementById('student-list');
-//     studentList.innerHTML = '';
+//     document.getElementById('student-list').innerHTML = '';
 //     const students = classroom.students;
 //     for (let i = 0; i < students.length; i++) {
-//         const element = students[i];
-//         studentList.innerHTML += `<li>${element.nameOf()} <button onclick='removeStudentFromList()'>|</button></li>`;
+//         const studentList = document.getElementById('student-list');
+//         const list = document.createElement('li');
+//         const textList = document.createTextNode(`${(students[i]).nameOf()}`);
+//         const removeButton = document.createElement('button');
+//         const textButton = document.createTextNode('|');
+//         removeButton.appendChild(textButton);
+//         removeButton.addEventListener('click', (event) => removeStudentFromList(students[i]));
+//         list.appendChild(textList);
+//         list.appendChild(removeButton);
+//         studentList.appendChild(list);
 //     };
 // };
+
+
+function displayClassroom(classroom) {
+    const studentList = document.getElementById('student-list');
+    studentList.innerHTML = '';
+    const students = classroom.students;
+    for (let i = 0; i < students.length; i++) {
+        const element = students[i];
+        studentList.innerHTML += `<li>${element.nameOf()} <button id='remove-btn${i}'>|</button></li>`;
+
+        document.getElementById('remove-btn' + i).addEventListener('click', (event) => removeStudentFromList(element));
+    };
+
+    
+};
 
 
 function removeStudentFromList(stud) {
